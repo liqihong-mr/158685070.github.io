@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能菜谱选择</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>智能菜谱选择</h1>
+            <p>根据您的口味偏好，为您推荐美味佳肴</p>
+        </header>
+
+        <main>
+            <section class="selection-area">
+                <h2>选择菜系</h2>
+                <div class="cuisine-selector">
+                    <button class="cuisine-btn" data-cuisine="all">全部</button>
+                    <button class="cuisine-btn" data-cuisine="chinese">中餐</button>
+                    <button class="cuisine-btn" data-cuisine="western">西餐</button>
+                    <button class="cuisine-btn" data-cuisine="japanese">日料</button>
+                    <button class="cuisine-btn" data-cuisine="korean">韩餐</button>
+                </div>
+
+                <h2>推荐菜谱</h2>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- 菜谱卡片将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <section class="recipe-detail" id="recipeDetail">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <div class="recipe-content">
+                    <h2 id="recipeTitle"></h2>
+                    <div class="recipe-image-container">
+                        <img id="recipeImage" src="" alt="菜谱图片">
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-meta">
+                            <span class="meta-item"><strong>菜系:</strong> <span id="recipeCuisine"></span></span>
+                            <span class="meta-item"><strong>烹饪时间:</strong> <span id="recipeTime"></span></span>
+                            <span class="meta-item"><strong>难度:</strong> <span id="recipeDifficulty"></span></span>
+                        </div>
+
+                        <div class="recipe-ingredients">
+                            <h3>食材准备</h3>
+                            <ul id="ingredientsList"></ul>
+                        </div>
+
+                        <div class="recipe-steps">
+                            <h3>烹饪步骤</h3>
+                            <ol id="stepsList"></ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 智能菜谱选择程序 | 让烹饪变得简单</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
